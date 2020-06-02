@@ -11,5 +11,4 @@ function bubbleSort(array) {
     return array;
 }
 
-// console.log(bubbleSort([1, 5, 3, 7, 9, 11]));
-console.log(bubbleSort([]));
+console.log(bubbleSort([1, 5, 3, 7, 9, 11]));
