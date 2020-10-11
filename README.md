@@ -15,4 +15,7 @@
 | [Storybook](https://github.com/hanameee/TIL/blob/master/FrontEnd/Storybook.md) | ✅         |
 | [Frontend Testing](https://github.com/hanameee/TIL/blob/master/FrontEnd/Frontend%20Testing.md) | ✅         |
 | [Lint](https://github.com/hanameee/TIL/blob/master/FrontEnd/Lint.md) | ✅         |
+| [Throttle and Debounce](https://github.com/hanameee/TIL/blob/master/FrontEnd/Throttle_and_Debounce.md) | ✅         |
+| 인증                                                         |           |
+| 웹 캐싱                                                      |           |
 
