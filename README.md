@@ -16,6 +16,7 @@
 | [Frontend Testing](https://github.com/hanameee/TIL/blob/master/FrontEnd/Frontend%20Testing.md) | ✅         |
 | [Lint](https://github.com/hanameee/TIL/blob/master/FrontEnd/Lint.md) | ✅         |
 | [Throttle and Debounce](https://github.com/hanameee/TIL/blob/master/FrontEnd/Throttle_and_Debounce.md) | ✅         |
+| [이미지 형식]([Throttle and Debounce](https://github.com/hanameee/TIL/blob/master/FrontEnd/이미지_형식.md)) |           |
 | 인증                                                         |           |
 | 웹 캐싱                                                      |           |
 
