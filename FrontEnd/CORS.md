@@ -154,7 +154,7 @@ credentials 옵션엔 아래 3가지 값을 사용할 수 있다.
 
 CORS를 가장 많이 마주치는 환경이 바로 로컬의 프론트엔드 개발 서버에서 요청을 보낼 때이다. 백엔드에  `Access-Control-Allow-Origin` 헤더가 세팅되어 있더라도, 개발을 할 때는 개발서버인 localhost에서 요청을 보내기 때문이다.
 
-프론트엔드 개발 시 대부분 webpack과 `webpack-dev-server` 을 활용하여 자신의 머신에 개발 환경을 구축하는데, 이 라이브러리가 제공하는 프록시 기능을 사용하면 편하게 CORS 정책을 우회할 수 있다. (참고로 CRA에도 이 proxy 기능이 있다.)
+프론트엔드 개발 시 대부분 webpack과 `webpack-dev-server` 을 활용하여 자신의 머신에 개발 환경을 구축하는데, 이 라이브러리가 제공하는 리벅스 프록시 기능을 사용하면 편하게 CORS 정책을 우회할 수 있다. (참고로 CRA에도 이 proxy 기능이 있다.)
 
 ```js
 module.exports = {
