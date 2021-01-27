@@ -14,6 +14,14 @@ const add = function(x:number, y:number):number {
 }
 ```
 
+화살표 함수의 경우
+
+```typescript
+const add = (x:number, y:number): number => {
+  
+}
+```
+
 #### 함수 선언문
 
 ```typescript
