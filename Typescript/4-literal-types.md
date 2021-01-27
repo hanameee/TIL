@@ -2,7 +2,7 @@
 
 ### 리터럴 타입
 
-리터럴 타입은 보다 더 구체적인 타입이다. String, numbers, boolean 3개의 literal type이 있고 이를 사용해 보다 구체적인 값의 타입을 지정할 수 있다.
+리터럴 타입은 일반적인 기본 타입에서 알아본 타입스크립트의 타입 보다 더 구체적인 타입이다. String, numbers, boolean 3개의 literal type이 있고 이를 사용해 보다 구체적인 값의 타입을 지정할 수 있다.
 
 ### Literal Narrowing
 

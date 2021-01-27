@@ -15,14 +15,14 @@
 
 ## 정리글 링크
 
-| 주제               | 링크 | 날짜 |
-| ------------------ | ---- | ---- |
-| 기본 타입          |      |      |
-| 인터페이스         |      |      |
-| 함수               |      |      |
-| 리터럴 타입        |      |      |
-| 유니언과 교차 타입 |      |      |
-| 클래스             |      |      |
-| 열거형             |      |      |
-| 제네릭             |      |      |
+| 주제               | 링크                                                         |
+| ------------------ | ------------------------------------------------------------ |
+| 기본 타입          | https://github.com/hanameee/TIL/blob/master/Typescript/1-basic-types.md |
+| 인터페이스         | https://github.com/hanameee/TIL/blob/master/Typescript/2-interfaces.md |
+| 함수               | https://github.com/hanameee/TIL/blob/master/Typescript/3-functions.md |
+| 리터럴 타입        | https://github.com/hanameee/TIL/blob/master/Typescript/4-literal-types.md |
+| 유니언과 교차 타입 |                                                              |
+| 클래스             |                                                              |
+| 열거형             |                                                              |
+| 제네릭             |                                                              |
 

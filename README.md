@@ -30,5 +30,19 @@
 | ------------------------------------------------------------ | --------- |
 | [클라우드 컴퓨팅이란](https://github.com/hanameee/TIL/blob/master/Cloud/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C_%EC%BB%B4%ED%93%A8%ED%8C%85%EC%9D%B4%EB%9E%80.md) | ✅         |
 | [Docker](https://github.com/hanameee/TIL/tree/master/Cloud/Docker) | 👩🏻‍💻       |
-| [Kubernetes](https://github.com/hanameee/TIL/tree/master/Cloud/Kubernetes) | 😴         |
+| [Kubernetes](https://github.com/hanameee/TIL/tree/master/Cloud/Kubernetes) | 👩🏻‍💻       |
 
+
+
+## Typescript
+
+| 주제                                                         | 완료 여부 |
+| ------------------------------------------------------------ | --------- |
+| [기본 타입](https://github.com/hanameee/TIL/blob/master/Typescript/1-basic-types.md) | ✅         |
+| [인터페이스](https://github.com/hanameee/TIL/blob/master/Typescript/2-interfaces.md) | ✅         |
+| [함수](https://github.com/hanameee/TIL/blob/master/Typescript/3-functions.md) | ✅         |
+| [리터럴 타입](https://github.com/hanameee/TIL/blob/master/Typescript/4-literal-types.md) | ✅         |
+| 유니언과 교차 타입                                           | 😴         |
+| 클래스                                                       | 😴         |
+| 열거형                                                       | 😴         |
+| 제네릭                                                       | 😴         |
