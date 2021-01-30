@@ -104,8 +104,17 @@ ANSWER SECTION을 보면 mysql에 대한  `A` 레코드의 IP 주소를 볼 수 
 
 컨테이너 로그를 확인해보면 (`docker logs <container-id>`) 이렇게 mysql db와 연결된 것을 확인할 수 있다!
 
-이제 3000포트로 접속해 todo를 입력한 뒤, 띄워놓은 mysql 컨테이너에서 todo_items를 조회해보면
+이제 3000포트로 접속해 todo app에서 항목을 입력한 뒤, 띄워놓은 mysql 컨테이너에서 todo_items를 조회해보면
+
+```bash
+docker exec -it 074e113351f7 mysql -p todos
+```
+
+```sql
+select * from todo_items;
+```
 
 <img src="Get-Started.assets/image-20210128221211649.png" alt="image-20210128221211649" style="zoom:50%;" />
 
 이렇게 DB에 잘 들어가있는 것을 볼 수 있다! :happy: 우왕! 신기해!
+
