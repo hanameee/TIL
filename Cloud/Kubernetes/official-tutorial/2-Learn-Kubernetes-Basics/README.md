@@ -148,3 +148,48 @@ kubectl get deployments # deployments 확인
 ```
 
 deployment는 앱의 인스턴스를 실행시킨다. 이 인스턴스는 노드 내부의 도커 컨테이너에서 실행되는중!
+
+## 앱 조사하기
+
+### 파드와 노드 보기
+
+#### 쿠버네티스 Pod란?
+
+위에서 Deployment를 생성했을 때, 쿠버네티스는 앱의 인스턴스를 호스트하기 위해 **Pod**를 생성했다. Pod란 하나 이상의 애플리케이션 컨테이너(i.e. Docker)들의 그룹과, 해당 컨테이너들 간에 공유되는 자원들을 나타내는 k8s의 추상적 개념(abstraction)이다.
+
+컨테이너들 간에 공유되는 자원들에는 아래와 같은 것들이 있다.
+
+- Volumes와 같은 Shared storage
+- unique cluster IP address와 같은 Networking
+- 컨테이너 이미지 버전이나, 사용할 특정 포트와 같은 각 컨테이너가 동작하는 방식에 대한 정보
+
+Pod는 애플리케이션 전용(specific)의 "logical host"를 모델링한다. Pod는 상대적으로 밀접하게 결합되어 있는 서로다른 애플리케이션 컨테이너(i.e. Node.js 앱 + Node.js 웹서버에 의해 발행되는 데이터를 공급하는 컨테이너)를 포함할 수 있다. 위에 나왔듯이 Pod 내의 컨테이너는 IP 주소와 Port space를 공유하고, 항상 co-located, co-scheduled 되며, 동일 노드 상의 shared context에서 동작한다.
+
+또한 Pod는 쿠버네티스 플랫폼 상에서의 **최소 단위**이다. 우리가 k8s에서 Deployment를 생성하면, Deployment는 container(들)을 바로 생성하는게 아니라, **container(들)을 가진 Pod를 생성**한다. 각 Pod는 스케줄된 Node에 tied 되며, (재구동 정책에 의해) 종료되거나 삭제되기 전까지 유지된다. Node Failure의 경우엔 동일한 Pod들이 클러스터 내의 다른 사용가능한 Node들에 스케줄링된다.
+
+<img src="module_03_pods-20210409012425593.svg" alt="img" style="zoom:50%;" />
+
+만약 서로 다른 컨테이너들이 서로 밀접하게 결합되어 있고, 디스크와 같은 자원을 공유해야 한다면? 그 컨테이너들은 하나의 Pod에 함께 스케줄되어야 한다.
+
+#### 쿠버네티스 노드(Node)란?
+
+Pod는 항상 Node 상에서 동작한다. Node란 k8s의 **워커 머신**이고, 클러스터에 따라 가상 또는 물리 머신일 수 있다. 각 Node는 마스터에 의해 관리된다.
+
+하나의 노드 내에서는 여러 Pods들이 실행될 수 있고, k8s 마스터가 자동으로 클러스터 내의 노드들에 pods를 스케줄링한다. 이런 마스터의 자동 스케줄링은 각 노드의 사용가능한 자원을 고려해서 이루어진다.
+
+모든 k8s 쿠버네티스 노드는 최소한 아래의 것들을 실행한다.
+
+- **kubelet** : 쿠버네티스 마스터와 노드 간의 커뮤니케이션을 담당하는 프로세스. 머신에서 구동되는 Pods와 컨테이너들을 관리하는 역할을 한다
+- **컨테이너 런타임** (i.e. Docker) : 레지스트리에서 컨테이너 이미지를 pull해오고, 컨테이너를 unpacking하고, 어플리케이션을 구동하는 역할을 한다.
+
+<img src="https://d33wubrfki0l68.cloudfront.net/5cb72d407cbe2755e581b6de757e0d81760d5b86/a9df9/docs/tutorials/kubernetes-basics/public/images/module_03_nodes.svg" alt="img" style="zoom:50%;" />
+
+#### kubectl로 트러블슈팅하기
+
+가장 많이 쓰이는 kubectl 커맨드(의 일부)는 아래와 같다.
+
+- **kubectl get** [리소스] - 리소스들의 목록 보여주기
+- **kubectl describe** [리소스] - 리소스와 관련된 자세한 정보 보여주기
+- **kubectl logs** - pod 내의 컨테이너의 로그 출력하기
+- **kubectl exec** - pod 내의 컨테이너에서 명령어 실행하기
+
