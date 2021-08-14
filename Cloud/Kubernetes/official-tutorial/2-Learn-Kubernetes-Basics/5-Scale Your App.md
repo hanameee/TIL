@@ -2,9 +2,9 @@
 
 링크: https://kubernetes.io/ko/docs/tutorials/kubernetes-basics/
 
-## 4. [Expose Your App Publicly](https://kubernetes.io/docs/tutorials/kubernetes-basics/expose/)
+## 5. [Scale Your App](https://kubernetes.io/docs/tutorials/kubernetes-basics/scale/)
 
-### 앱 노출을 위해 Service 이용하기
+### 복수의 앱 인스턴스를 구동하기
 
 쿠버네티스 Pod들은 lifecycle을 가진다. 즉, mortal하므로 언젠간 죽게 된다. 워커 노드가 죽으면, 해당 노드 상에서 동작하는 Pod들 또한 죽게 된다! 이렇게 Pod가 죽더라도 Replicaset은 새로운 Pod들을 생성해서 동적으로 클러스터를 기존 상태로 되돌려줄 수 있다.
 
